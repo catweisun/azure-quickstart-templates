@@ -221,6 +221,9 @@
     "commonSettings": {
       "availabilitySetName": "mongodbAvailSet"
     },
+    "DeploymentEnvironmentSettings":{
+      "ComputeAPIVersion":"2016-03-30"
+    },
     "storageSettings": {
       "vhdStorageAccountName": "[parameters('storageAccountNamePrefix')]",
       "vhdContainerName": "[variables('vmStorageAccountContainerName')]",
@@ -316,6 +319,9 @@
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
+          "DeploymentEnvironmentSettings":{
+            "value": "[variables('DeploymentEnvironmentSettings')]"
+          },
           "commonSettings": {
             "value": "[variables('commonSettings')]"
           },
@@ -342,6 +348,9 @@
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
+          "DeploymentEnvironmentSettings":{
+            "value": "[variables('DeploymentEnvironmentSettings')]"
+          },
           "commonSettings": {
             "value": "[variables('commonSettings')]"
           },
@@ -380,6 +389,9 @@
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
+          "DeploymentEnvironmentSettings":{
+            "value": "[variables('DeploymentEnvironmentSettings')]"
+          },
           "commonSettings": {
             "value": "[variables('commonSettings')]"
           },
@@ -423,6 +435,9 @@
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
+          "DeploymentEnvironmentSettings":{
+            "value": "[variables('DeploymentEnvironmentSettings')]"
+          },
           "commonSettings": {
             "value": "[variables('commonSettings')]"
           },
@@ -466,6 +481,9 @@
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
+          "DeploymentEnvironmentSettings":{
+            "value": "[variables('DeploymentEnvironmentSettings')]"
+          },
           "commonSettings": {
             "value": "[variables('commonSettings')]"
           },
