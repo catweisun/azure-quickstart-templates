@@ -133,6 +133,14 @@
       "metadata": {
         "description": "The shared secret key for the MongoDB replica set"
       }
+    },
+    "StorageAccountDomain":
+    {
+      "type": "string",
+      "defaultValue": ".blob.shanghai.azurestack.corp.microsoft.com",
+      "metadata": {
+        "description":"default storage domain name"
+      }
     }
   },
   "variables": {
@@ -206,7 +214,7 @@
       "imageSKU": "14.04.5-LTS"
     },
     "vmStorageAccountContainerName": "vhd-mongodb",
-    "vmStorageAccountDomain": ".blob.shanghai.azurestack.corp.microsoft.com",
+    "vmStorageAccountDomain": "[parameters('StorageAccountDomain')]",
     "vnetID": "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworkName'))]",
     "sharedScriptUrl": "[concat('https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/shared_scripts/', variables('osFamilySpec').osName, '/')]",
     "scriptUrl": "https://raw.githubusercontent.com/catweisun/azure-quickstart-templates/master/mongodb-high-availability/",
