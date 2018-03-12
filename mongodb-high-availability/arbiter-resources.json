@@ -94,7 +94,7 @@
     {
       "type": "Microsoft.Compute/virtualMachines/extensions",
       "name": "vmArbiter/installmongodb",
-      "apiVersion": "2015-05-01-preview",
+      "apiVersion": "[parameters('DeploymentEnvironmentSettings').ComputeAPIVersion]",
       "location": "[resourceGroup().location]",
       "dependsOn": [
         "[concat('Microsoft.Compute/virtualMachines/', 'vmArbiter')]"
